@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>הצהרת נגישות · אירה כהן</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&family=Frank+Ruhl+Libre:wght@500&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#faf7f2;--ink:#2b2622;--muted:#5f5650;--accent:#6a5034;--line:#e3d9cc;--serif:'Frank Ruhl Libre',Georgia,serif}
+[lang=ru]{--serif:'Cormorant Garamond',Georgia,serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 Rubik,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
+header a{color:var(--accent);font-weight:500}
+.langs{display:flex;gap:2px;padding:3px;border-radius:999px;border:1px solid #c9bba8;background:#fff}
+.langs button{border:0;background:transparent;font:inherit;font-size:14px;padding:6px 12px;border-radius:999px;color:var(--accent);cursor:pointer}
+.langs button[aria-pressed=true]{background:var(--accent);color:#fff;font-weight:500}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(32px,6vw,44px);line-height:1.15;margin:34px 0 8px}
+[lang=ru] h1{font-weight:600}
+h2{font-size:20px;font-weight:500;margin:30px 0 8px}
+p,li{color:var(--ink)}
+.muted{color:var(--muted)}
+ul{padding-inline-start:22px}
+.card{background:#fff;border-radius:18px;padding:18px 20px;margin-top:12px;box-shadow:0 8px 24px -16px rgba(110,84,52,.4)}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid #0b57d0;outline-offset:3px;box-shadow:0 0 0 6px #fff}
+.skip{position:fixed;top:8px;inset-inline-start:8px;background:#fff;color:#1b1714;padding:12px 18px;border-radius:12px;transform:translateY(-150%);box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.skip:focus{transform:none}
+footer{margin:40px 0 30px;font-size:14px;color:var(--muted)}
+</style>
+</head>
+<body>
+<a class="skip" href="#content" data-t="skip"></a>
+<div class="wrap">
+<header>
+  <a href="./" id="back" data-t="back"></a>
+  <div class="langs" role="group" aria-label="Language / שפה / Язык"><button type="button" data-lang="he" lang="he">עברית</button><button type="button" data-lang="ru" lang="ru">Русский</button></div>
+</header>
+<main id="content" tabindex="-1"></main>
+<footer data-t="updated"></footer>
+</div>
+<script>
+const T = {
+he: {
+  title: 'הצהרת נגישות · אירה כהן', skip: 'דילוג לתוכן', back: '→ חזרה לאתר', updated: 'ההצהרה עודכנה בתאריך 07.11.2026.',
+  html: `
+<h1>הצהרת נגישות</h1>
+<p class="muted">אתר זה של אירה כהן (מטפלת, נתניה ואונליין). אנו רואים חשיבות רבה במתן שירות שוויוני ונגיש לכל אדם, ובכלל זה לאנשים עם מוגבלות.</p>
+<h2>התקן</h2>
+<p>האתר הונגש בהתאם לתקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות), התשע"ג-2013, ולתקן הישראלי ת"י 5568 המבוסס על הנחיות WCAG 2.0 ברמה AA.</p>
+<h2>מה נעשה באתר</h2>
+<ul>
+<li>האתר בעברית (מימין לשמאל) וברוסית, והשפה מוגדרת בקוד כך שקוראי מסך מקריאים אותה נכון. מעבר שפה — בכפתורים "עברית / Русский" בראש העמוד.</li>
+<li>ניווט מלא במקלדת, עם מסגרת מודגשת סביב הרכיב הנבחר, וקישור "דילוג לתוכן" בתחילת העמוד.</li>
+<li>מבנה כותרות מסודר, טקסט חלופי לתמונה, וסמלים דקורטיביים מוסתרים מקוראי מסך.</li>
+<li>ניגודיות צבעים מספקת בין טקסט לרקע, ואפשרות להגדיל את התצוגה בדפדפן עד 200% בלי לאבד תוכן.</li>
+<li>קישורים שנפתחים בחלון חדש מסומנים לקוראי מסך. התפריט נסגר במקש Esc והמיקוד חוזר לכפתור שפתח אותו.</li>
+<li>אנימציות עדינות בלבד; הן נעצרות אוטומטית אם הוגדר בטלפון או במחשב "הפחתת תנועה", ואפשר לעצור אותן בתפריט הנגישות.</li>
+</ul>
+<h2>תפריט הנגישות</h2>
+<p>בפינת המסך יש כפתור נגישות (סמל דמות כחול). בו אפשר: להגדיל טקסט (שתי דרגות), להפעיל ניגודיות גבוהה, להדגיש קישורים, לעבור לגופן פשוט וקריא, ולעצור אנימציות. ההגדרות נשמרות בדפדפן שלכם.</p>
+<h2>אופן הבדיקה</h2>
+<p>האתר נבדק בכלי בדיקה אוטומטי (axe-core) ובבדיקה ידנית של ניווט מקלדת ושל תצוגה בטלפון ובמחשב, בדפדפנים עדכניים (Chrome, Edge, Safari, Firefox).</p>
+<h2>הסתייגות</h2>
+<p>אנו פועלים כל הזמן לשיפור הנגישות. אם בכל זאת נתקלתם בקושי, או בחלק באתר שאינו נגיש — נשמח שתספרו לנו, ונטפל בכך בהקדם.</p>
+<h2>נגישות המפגשים</h2>
+<p>המפגשים מתקיימים בנתניה או אונליין (בשיחת וידאו). אם אתם זקוקים להתאמה — למשל לגבי הגעה למקום המפגש, או מפגש אונליין במקום מפגש פרונטלי — כתבו לנו מראש ונתאים את המפגש ככל האפשר.</p>
+<h2>פרטי רכזת הנגישות</h2>
+<div class="card"><p style="margin:0">אירה כהן<br>טלפון / וואטסאפ: <a href="tel:+972509000698">050-900-0698</a> · <a href="https://wa.me/972509000698" target="_blank" rel="noopener">לכתוב בוואטסאפ<span class="sr"> (נפתח בחלון חדש)</span></a></p></div>
+`},
+ru: {
+  title: 'Заявление о доступности · Ира Коэн', skip: 'Перейти к содержанию', back: '← Вернуться на сайт', updated: 'Заявление обновлено 07.11.2026.',
+  html: `
+<h1>Заявление о доступности</h1>
+<p class="muted">Это сайт Иры Коэн (терапевт, Нетания и онлайн). Нам важно, чтобы сайтом и услугами могли пользоваться все, в том числе люди с инвалидностью.</p>
+<h2>Стандарт</h2>
+<p>Сайт адаптирован в соответствии с израильскими Правилами о равных правах людей с инвалидностью (адаптация услуг для доступности), 2013 (תקנות שוויון זכויות לאנשים עם מוגבלות, התשע"ג-2013), и израильским стандартом ת"י 5568, основанным на рекомендациях WCAG 2.0 уровня AA.</p>
+<h2>Что сделано на сайте</h2>
+<ul>
+<li>Сайт на иврите (справа налево) и на русском; язык указан в коде, поэтому экранные дикторы читают его правильно. Переключение языка — кнопками «עברית / Русский» вверху страницы.</li>
+<li>Полная навигация с клавиатуры, с заметной рамкой вокруг выбранного элемента, и ссылка «Перейти к содержанию» в начале страницы.</li>
+<li>Упорядоченные заголовки, текстовое описание фотографии; декоративные значки скрыты от экранных дикторов.</li>
+<li>Достаточный контраст текста и фона; страницу можно увеличить в браузере до 200% без потери содержимого.</li>
+<li>Ссылки, которые открываются в новом окне, помечены для экранных дикторов. Меню закрывается клавишей Esc, и фокус возвращается на кнопку, которая его открыла.</li>
+<li>Анимация только мягкая; она отключается сама, если в телефоне или компьютере включено «уменьшение движения», и её можно остановить в меню доступности.</li>
+</ul>
+<h2>Меню доступности</h2>
+<p>В углу экрана есть кнопка доступности (синий значок с фигурой человека). В ней можно: увеличить текст (две ступени), включить высокий контраст, выделить ссылки, перейти на простой читаемый шрифт и остановить анимацию. Настройки сохраняются в вашем браузере.</p>
+<h2>Как проверяли</h2>
+<p>Сайт проверен автоматическим инструментом (axe-core) и вручную: навигация с клавиатуры, вид на телефоне и на компьютере, в актуальных браузерах (Chrome, Edge, Safari, Firefox).</p>
+<h2>Оговорка</h2>
+<p>Мы постоянно работаем над доступностью. Если вы всё же столкнулись с трудностью или с недоступной частью сайта — пожалуйста, сообщите нам, и мы исправим это как можно скорее.</p>
+<h2>Доступность встреч</h2>
+<p>Встречи проходят в Нетании или онлайн (видеозвонок). Если вам нужна адаптация — например, по поводу того, как добраться до места встречи, или встреча онлайн вместо очной — напишите заранее, и мы подстроим встречу, насколько это возможно.</p>
+<h2>Контакт по вопросам доступности</h2>
+<div class="card"><p style="margin:0">Ира Коэн<br>Телефон / WhatsApp: <a href="tel:+972509000698">050-900-0698</a> · <a href="https://wa.me/972509000698" target="_blank" rel="noopener">Написать в WhatsApp<span class="sr"> (откроется в новом окне)</span></a></p></div>
+`},
+}
+const q = new URLSearchParams(location.search).get('lang')
+let lang = 'he'
+try { lang = (q === 'ru' || q === 'he') ? q : (localStorage.getItem('lang') || 'he') } catch {}
+function render() {
+  const t = T[lang]
+  document.documentElement.lang = lang
+  document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr'
+  document.title = t.title
+  document.querySelectorAll('[data-t]').forEach(el => { el.textContent = t[el.dataset.t] })
+  document.getElementById('content').innerHTML = t.html
+  document.getElementById('back').href = './?lang=' + lang
+  document.querySelectorAll('[data-lang]').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === lang))
+}
+document.querySelectorAll('[data-lang]').forEach(b => b.onclick = () => { lang = b.dataset.lang; try { localStorage.setItem('lang', lang) } catch {}; render() })
+render()
+</script>
+<style>.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}</style>
+</body>
+</html>

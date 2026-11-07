@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="ru" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ира Коэн · Тело говорит. Душа ведёт.</title>
+<meta name="description" content="Интегративный подход: метод д-ра Надера Бутто и «Эйн а-Бдолах». Работа с первопричиной кризиса. Нетания и онлайн, русский и иврит." />
+<meta property="og:title" content="Ира Коэн · Тело говорит. Душа ведёт. Всё — от корня." />
+<meta property="og:description" content="Метод д-ра Надера Бутто + «Эйн а-Бдолах». Нетания и онлайн." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&family=Frank+Ruhl+Libre:wght@500;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet" />
+<style>
+/* v3 · мягкий живой стиль: природные тона (docs/10), плавные «листы», блики, мягкое появление */
+:root{
+  --bg:#faf7f2;--ink:#2b2622;--muted:#6f665f;--line:#e8e1d8;--accent:#8a6d4b;--accent-2:#a8865f;--soft:#f1ebe3;
+  --sun:#e6d8bb;--bokeh:#d4c2a2;--water:#a9c6bb;--leaf:#ece0c6;--eve:#3c3f42;
+  --serif:'Cormorant Garamond',Georgia,serif;--r:24px;
+  --shadow:0 14px 34px -16px rgba(110,84,52,.32),0 2px 6px -2px rgba(110,84,52,.08);
+}
+[lang=he]{--serif:'Frank Ruhl Libre',Georgia,serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Rubik,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.wrap{max-width:980px;margin:0 auto;padding:0 22px}
+h1,h2,.logo,.menu a.item,.price b,blockquote{font-family:var(--serif)}
+h1,h2{font-weight:600}[lang=he] h1,[lang=he] h2{font-weight:500}
+h1{font-size:clamp(40px,10vw,66px);line-height:1.08;margin:0 0 16px;letter-spacing:-.01em}
+h2{font-size:clamp(30px,6vw,44px);line-height:1.15;margin:0 0 30px;text-align:center}
+h2::after{content:'';display:block;width:54px;height:2px;margin:14px auto 0;border-radius:2px;background:linear-gradient(90deg,transparent,var(--accent-2),transparent)}
+h3{margin:0 0 6px;font-size:19px;font-weight:500}
+.lead{font-size:clamp(18px,2.4vw,21px);color:var(--muted);max-width:680px}
+.muted{color:var(--muted)}
+
+/* Шапка */
+header{position:fixed;inset:0 0 auto 0;z-index:5;transition:background .3s,box-shadow .3s}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px}
+header.solid{background:rgba(250,247,242,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(138,109,75,.12)}
+.logo{font-size:23px;font-weight:600;text-decoration:none;color:var(--ink)}[lang=he] .logo{font-weight:500}
+header:not(.solid) .logo{color:#fff;text-shadow:0 1px 12px rgba(60,45,30,.35)}
+nav{display:flex;gap:10px;align-items:center}
+/* Переключатель языка: оба языка видны, выбранный подсвечен */
+.langs{display:flex;gap:2px;padding:3px;border-radius:999px;background:rgba(255,255,255,.6);border:1px solid rgba(138,109,75,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.langs button{border:0;background:transparent;font:inherit;font-size:14px;line-height:1.2;padding:6px 12px;border-radius:999px;color:var(--accent);cursor:pointer;transition:background .2s,color .2s}
+.langs button[aria-pressed=true]{background:var(--accent);color:#fff;font-weight:500}
+header:not(.solid) .langs{background:rgba(40,30,24,.22);border-color:rgba(255,255,255,.55)}
+header:not(.solid) .langs button{color:#fff}
+header:not(.solid) .langs button[aria-pressed=true]{background:#fff;color:var(--accent)}
+.burger{width:44px;height:44px;border:0;background:transparent;display:grid;place-items:center;cursor:pointer;padding:0;color:var(--ink)}
+.burger span{display:block;width:22px;height:1.8px;background:currentColor;margin:3px 0;border-radius:2px}
+.burger span:nth-child(2){width:16px;justify-self:end}
+header:not(.solid) .burger{color:#fff}
+
+/* Первый экран: закат над морем, мягкая дымка, медленное «дыхание» фона, блики */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:96px 0 64px;color:#fff;overflow:hidden;isolation:isolate}
+.hero::before{content:'';position:absolute;inset:-4%;z-index:-2;background:url(img/hero.jpg) center 42%/cover;animation:breathe 26s ease-in-out infinite alternate}
+.hero::after{content:'';position:absolute;inset:0;z-index:-1;background:
+  radial-gradient(90% 55% at 50% 38%,rgba(96,72,50,.30),transparent 75%),
+  linear-gradient(180deg,rgba(92,70,50,.30) 0%,rgba(110,84,60,.26) 40%,rgba(84,68,54,.50) 66%,rgba(54,45,40,.78) 100%)}
+@keyframes breathe{from{transform:scale(1)}to{transform:scale(1.07) translateY(-1%)}}
+/* Первый экран с фото Иры: фото сверху во всю ширину, низ мягко уходит в тёплый тёмный тон под текстом */
+.hero.with-photo::before{inset:0;background:var(--hero-photo) center top/100% auto no-repeat #3a302b;transform-origin:50% 0;animation-name:breathe-soft;filter:brightness(1.12) contrast(.97) saturate(1.04)}
+.hero.with-photo::after{background:linear-gradient(180deg,rgba(40,30,24,.38) 0,rgba(40,30,24,0) 90px,rgba(58,48,43,0) 62vw,rgba(58,48,43,.72) 96vw,#3a302b 122vw)}
+@keyframes breathe-soft{from{transform:scale(1)}to{transform:scale(1.035)}}
+.hero.with-photo .avatar{display:none}
+@media(max-width:719px){.hero.with-photo{min-height:0;padding-top:86vw;padding-bottom:58px}
+  .hero.with-photo::after{background:linear-gradient(180deg,rgba(40,30,24,.24) 0,rgba(40,30,24,0) 70px,rgba(58,48,43,0) 50vw,rgba(58,48,43,.86) 82vw,#3a302b 98vw)}}
+/* широкий экран: фото сбоку, текст рядом на тёплом тёмном фоне */
+@media(min-width:720px){.hero.with-photo{align-items:center}
+  .hero.with-photo::before{background-size:auto 100%;background-position:right top}
+  [dir=rtl] .hero.with-photo::before{background-position:left top}
+  .hero.with-photo::after{background:linear-gradient(90deg,#3a302b 0%,#3a302b 36%,rgba(58,48,43,.6) 52%,rgba(58,48,43,0) 70%)}
+  [dir=rtl] .hero.with-photo::after{background:linear-gradient(270deg,#3a302b 0%,#3a302b 36%,rgba(58,48,43,.6) 52%,rgba(58,48,43,0) 70%)}
+  .hero.with-photo .wrap{max-width:1080px;width:100%}.hero.with-photo .wrap>*{max-width:480px}}
+.bokeh{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.bokeh i{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(255,244,222,.55),rgba(255,244,222,0) 70%);animation:float 14s ease-in-out infinite alternate}
+.bokeh i:nth-child(1){width:140px;height:140px;left:8%;top:52%;animation-duration:17s}
+.bokeh i:nth-child(2){width:80px;height:80px;left:70%;top:60%;animation-duration:13s;animation-delay:-4s}
+.bokeh i:nth-child(3){width:200px;height:200px;left:55%;top:30%;opacity:.6;animation-duration:21s}
+.bokeh i:nth-child(4){width:60px;height:60px;left:25%;top:74%;animation-duration:11s;animation-delay:-2s}
+.bokeh i:nth-child(5){width:110px;height:110px;left:84%;top:80%;animation-duration:19s;animation-delay:-7s}
+@keyframes float{from{transform:translate(0,0)}to{transform:translate(18px,-26px)}}
+.hero h1{text-shadow:0 2px 24px rgba(60,40,20,.45),0 1px 3px rgba(60,40,20,.25)}
+.hero .lead,.hero .profile{text-shadow:0 1px 12px rgba(50,34,20,.5)}
+.hero .lead{color:rgba(255,255,255,.96)}
+.profile{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.avatar{width:74px;height:74px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:var(--serif);font-size:32px;color:#fff;
+  background:linear-gradient(140deg,rgba(255,255,255,.35),rgba(255,255,255,.08)) center/cover;border:1.5px solid rgba(255,255,255,.85);box-shadow:0 0 0 6px rgba(255,255,255,.14),0 8px 24px rgba(60,40,20,.25)}
+/* с фото: аватар крупным планом на лице, в арке — целиком */
+.avatar[style*=background-image]{background-size:220%;background-position:50% 6%}
+.photo[style*=background-image]{background-size:cover;background-position:center 20%}
+/* фото уже на первом экране — в «Об Ире» не повторяем */
+.with-photo-page .about{grid-template-columns:1fr;max-width:720px;text-align:center}.with-photo-page .photo{display:none}
+.with-photo-page .about h2{text-align:center}.with-photo-page .about h2::after,.with-photo-page .about blockquote::before{margin-inline:auto}
+.profile b{display:block;font-size:19px;font-weight:500}.profile span{color:rgba(255,255,255,.88);font-size:15px}
+.links{display:grid;gap:11px;max-width:540px;margin:28px 0 0}
+.links a{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:20px;text-decoration:none;font-weight:500;color:var(--ink);
+  background:rgba(255,253,249,.84);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 8px 26px -12px rgba(40,28,16,.45);transition:transform .25s,box-shadow .25s}
+.links a:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(40,28,16,.5)}
+.links a>span:not(.ic){flex:1}
+.links a::after{content:'→';color:var(--accent);opacity:.7}[dir=rtl] .links a::after{content:'←'}
+.links small{display:block;font-weight:400;font-size:13.5px;opacity:.72}
+.links a.primary{color:#fff;background:linear-gradient(120deg,#86684a,#7a5f40 55%,#6b5236);animation:glow 3.6s ease-in-out infinite}
+.links a.primary::after{color:#fff;opacity:.9}
+@keyframes glow{0%,100%{box-shadow:0 8px 26px -10px rgba(138,109,75,.7),0 0 0 0 rgba(255,236,205,.0)}50%{box-shadow:0 10px 30px -10px rgba(138,109,75,.8),0 0 0 7px rgba(255,236,205,.18)}}
+.ic{width:38px;height:38px;border-radius:50%;flex:none;display:grid;place-items:center;background:var(--soft);color:var(--accent)}
+.ic svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.primary .ic{background:rgba(255,255,255,.2);color:#fff}
+
+/* Разделы — мягкие «листы», которые наплывают друг на друга */
+main>section:not(.hero){position:relative;padding:76px 0 84px;margin-top:-34px;border-radius:34px 34px 0 0;scroll-margin-top:30px}
+#who{background:radial-gradient(60% 40% at 100% 0%,rgba(230,216,187,.55),transparent 70%),radial-gradient(50% 35% at 0% 100%,rgba(169,198,187,.28),transparent 70%),var(--bg)}
+#method{background:linear-gradient(180deg,#eef2ee 0%,#f3f1ea 100%)}
+#how{background:radial-gradient(70% 45% at 0% 0%,rgba(236,224,198,.9),transparent 70%),#f8f3ea}
+#prices{background:linear-gradient(180deg,#f3ece1 0%,#faf7f2 100%)}
+#about{background:radial-gradient(55% 40% at 100% 20%,rgba(212,194,162,.4),transparent 70%),var(--bg)}
+#faq{background:linear-gradient(180deg,#f1f4f1,#f6f3ec)}
+#contact{overflow:hidden;isolation:isolate;color:#fff;background:linear-gradient(180deg,rgba(92,72,56,.84) 0%,rgba(78,62,50,.9) 45%,#3f3632 100%),url(img/hero.jpg) center 46%/cover;padding-bottom:110px}
+
+/* Карточки */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{background:rgba(255,255,255,.78);border-radius:var(--r);padding:24px 22px;box-shadow:var(--shadow);backdrop-filter:blur(4px)}
+.card .ic{width:48px;height:48px;margin-bottom:14px;background:linear-gradient(140deg,#f6efe3,#e9dcc4)}
+.card .ic svg{width:24px;height:24px}
+.card p{margin:0}
+#method .card .ic{background:linear-gradient(140deg,#eaf2ee,#cfe0d8);color:#5f7d72}
+.common{margin:30px auto 0;max-width:640px;text-align:center;font-family:var(--serif);font-size:clamp(21px,3.4vw,26px);line-height:1.4;color:var(--ink)}
+
+/* Как проходит встреча — мягкая линия шагов */
+.steps{counter-reset:s;list-style:none;padding:0;margin:0 auto;max-width:680px;position:relative}
+.steps::before{content:'';position:absolute;inset-inline-start:21px;top:24px;bottom:24px;width:2px;background:linear-gradient(180deg,var(--sun),var(--water));border-radius:2px}
+.steps li{counter-increment:s;position:relative;padding:4px 0 22px;padding-inline-start:64px}
+.steps li::before{content:counter(s);position:absolute;inset-inline-start:0;top:0;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;
+  font-family:var(--serif);font-size:21px;color:var(--accent);background:#fff;box-shadow:var(--shadow),inset 0 0 0 1.5px rgba(168,134,95,.35)}
+.note{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--muted);background:rgba(255,255,255,.66);border-radius:18px;padding:15px 18px;margin:26px auto 0;max-width:680px;box-shadow:0 6px 18px -12px rgba(110,84,52,.3)}
+.note::before{content:'';flex:none;width:8px;height:8px;margin-top:9px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 0 5px rgba(168,134,95,.15)}
+
+/* Цены */
+#price-list{display:grid;gap:14px;max-width:680px;margin:0 auto}
+.price{position:relative;display:flex;justify-content:space-between;align-items:center;gap:16px;background:#fff;border-radius:var(--r);padding:20px 22px;box-shadow:var(--shadow)}
+.price .muted{font-size:14px;margin-top:2px}
+.price b{white-space:nowrap;font-size:30px;font-weight:600;color:var(--accent);line-height:1}
+.price.first{background:linear-gradient(130deg,#fffaf2,#f4e8d4);box-shadow:var(--shadow),inset 0 0 0 1.5px rgba(168,134,95,.4);padding-top:30px}
+.badge{position:absolute;top:-11px;inset-inline-start:20px;background:var(--accent);color:#fff;font-size:12.5px;font-weight:500;padding:3px 12px;border-radius:999px;letter-spacing:.02em}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(120deg,#86684a,#7a5f40 55%,#6b5236);color:#fff;text-decoration:none;padding:14px 26px;border-radius:999px;font-weight:500;box-shadow:0 10px 24px -12px rgba(138,109,75,.8);transition:transform .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:rgba(255,255,255,.6);color:var(--accent);box-shadow:inset 0 0 0 1.5px rgba(138,109,75,.55)}
+
+/* Обо мне */
+.about{display:grid;grid-template-columns:240px 1fr;gap:40px;align-items:center}
+.about h2{text-align:start}.about h2::after{margin-inline:0}
+.photo{width:240px;height:300px;border-radius:999px 999px 28px 28px;display:grid;place-items:center;font-family:var(--serif);font-size:84px;color:#fff;
+  background:radial-gradient(circle at 70% 25%,rgba(255,246,228,.9),transparent 40%),linear-gradient(170deg,#e6d8bb,#c4b196 55%,#9bb5ac) center/cover;box-shadow:var(--shadow);
+  outline:1.5px solid rgba(168,134,95,.35);outline-offset:8px}
+blockquote{position:relative;margin:26px 0 0;padding:6px 0 0;font-style:italic;font-size:clamp(22px,3.6vw,27px);line-height:1.35;color:var(--accent)}
+[lang=he] blockquote{font-style:normal}
+blockquote::before{content:'';display:block;width:34px;height:1.5px;margin-bottom:14px;background:var(--bokeh)}
+.about blockquote::before{margin-inline:0}@media(max-width:720px){.about blockquote::before{margin-inline:auto}}
+
+/* Вопросы */
+#faq-list{max-width:720px;margin:0 auto}
+details{background:rgba(255,255,255,.8);border-radius:20px;padding:0;margin-bottom:10px;box-shadow:0 6px 20px -14px rgba(110,84,52,.35);transition:background .25s}
+details[open]{background:#fff}
+summary{cursor:pointer;font-weight:500;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:17px 20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--soft);color:var(--accent);font-size:20px;font-weight:400;transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:0;padding:0 20px 18px;color:var(--muted)}
+
+/* Финал */
+#contact h2,#contact .lead{text-align:center;color:#fff;margin-inline:auto}
+#contact h2::after{background:linear-gradient(90deg,transparent,#e6d8bb,transparent)}
+#contact .lead{color:rgba(255,255,255,.88)}
+#contact .btn{background:#fff;color:var(--accent)}
+#contact .btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.65)}
+#contact .note{background:rgba(255,255,255,.1);color:rgba(255,255,255,.78);box-shadow:none}
+#contact .note::before{background:#e6d8bb;box-shadow:0 0 0 5px rgba(230,216,187,.18)}
+footer{padding:0 0 96px;font-size:14px;color:rgba(255,255,255,.7);background:#3f3632;text-align:center}
+footer a{color:#e6d8bb}
+
+/* Плавающая кнопка WhatsApp */
+.wa{position:fixed;bottom:18px;inset-inline-end:18px;z-index:6;display:inline-flex;align-items:center;gap:8px;background:#2fbf71;color:#fff;border-radius:999px;padding:12px 18px;text-decoration:none;font-weight:500;
+  box-shadow:0 10px 26px -10px rgba(20,90,50,.6);transition:opacity .3s,transform .3s}
+.wa svg{width:20px;height:20px;fill:currentColor}
+.wa.off{opacity:0;transform:translateY(12px);pointer-events:none}
+
+/* Меню */
+.menu{position:fixed;inset:0;z-index:20;color:#fff;display:flex;flex-direction:column;padding:22px 28px 34px;
+  background:linear-gradient(180deg,rgba(58,66,64,.72),rgba(43,38,34,.9)),url(img/menu.jpg) center/cover;
+  opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .3s,transform .3s,visibility .3s}
+.menu.open{opacity:1;visibility:visible;transform:none}
+.menu .logo{color:#fff}
+.menu .top{display:flex;justify-content:space-between;align-items:center;height:44px}
+.menu .close{width:44px;height:44px;border:0;background:rgba(255,255,255,.12);border-radius:50%;color:#fff;font-size:26px;cursor:pointer;line-height:1}
+.menu nav{display:flex;flex-direction:column;gap:4px;margin:auto 0;align-items:flex-start}
+.menu a.item{color:#fff;text-decoration:none;font-size:clamp(30px,8vw,42px);font-weight:500;line-height:1.35;padding:2px 0;transition:color .2s,padding .2s}
+.menu a.item:hover{color:#e9d9bf;padding-inline-start:6px}
+.menu .bottom{display:grid;gap:10px}
+.menu .bottom a{display:block;text-align:center;padding:15px;border-radius:999px;text-decoration:none;font-weight:500}
+.menu .bottom .wa-btn{background:#2fbf71;color:#fff}.menu .bottom .ig-btn{border:1.5px solid rgba(255,255,255,.55);color:#fff}
+body.noscroll{overflow:hidden}
+
+/* Мягкое появление при прокрутке */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.js .rv.in{opacity:1;transform:none}
+.js .grid .rv:nth-child(2),.js .steps .rv:nth-child(2){transition-delay:.1s}
+.js .grid .rv:nth-child(3),.js .steps .rv:nth-child(3){transition-delay:.2s}
+.js .steps .rv:nth-child(4){transition-delay:.3s}
+
+@media(max-width:720px){.about{grid-template-columns:1fr;justify-items:center;text-align:center}.about h2{text-align:center}.about h2::after{margin-inline:auto}
+  .photo{width:220px;height:270px}main>section:not(.hero){padding:64px 0 76px}.price b{font-size:26px}}
+@media(min-width:900px){.hero:not(.with-photo){align-items:center}.hero:not(.with-photo) .wrap{max-width:720px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+
+/* ===== Доступность (ת"י 5568 / WCAG 2.0 AA) ===== */
+:root{--accent-text:#6a5034}
+a{color:var(--accent-text)}
+.langs button,.btn.ghost{color:var(--accent-text)}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:fixed;top:8px;inset-inline-start:8px;z-index:50;background:#fff;color:#1b1714;padding:12px 18px;border-radius:12px;font-weight:500;text-decoration:none;transform:translateY(-150%);transition:transform .2s;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.skip:focus{transform:none}
+:focus-visible{outline:3px solid #0b57d0;outline-offset:3px;box-shadow:0 0 0 6px #fff}
+.menu :focus-visible{outline-color:#fff;box-shadow:0 0 0 6px #0b57d0}
+main:focus{outline:none}
+/* читаемость шапки поверх фото */
+header:not(.solid){background:linear-gradient(180deg,rgba(40,30,24,.55),rgba(40,30,24,0))}
+/* мягкое свечение главной кнопки — несколько раз, не бесконечно */
+.links a.primary{animation-iteration-count:3}
+/* Кнопка и панель «נגישות» */
+.a11y-btn{position:fixed;top:50%;inset-inline-end:0;z-index:7;width:46px;height:52px;margin-top:-26px;border-radius:14px 0 0 14px;border:0;cursor:pointer;display:grid;place-items:center;background:#1d4f91;color:#fff;box-shadow:0 8px 20px -8px rgba(0,0,0,.55)}
+[dir=rtl] .a11y-btn{border-radius:0 14px 14px 0}
+.a11y-btn svg{width:28px;height:28px;fill:currentColor}
+.a11y-panel{position:fixed;top:50%;transform:translateY(-50%);inset-inline-end:56px;z-index:30;width:min(320px,calc(100vw - 36px));background:#fff;color:#1b1714;border-radius:20px;padding:16px;box-shadow:0 20px 50px -12px rgba(0,0,0,.45);font-size:16px}
+.a11y-panel[hidden]{display:none}
+.a11y-panel h2{font-family:Rubik,system-ui,sans-serif;font-size:19px;font-weight:500;text-align:start;margin:0 0 10px}
+.a11y-panel h2::after{display:none}
+.a11y-panel .row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.a11y-panel button.opt{font:inherit;font-size:15px;text-align:start;padding:10px 12px;border-radius:12px;border:1.5px solid #c9bba8;background:#faf7f2;color:#1b1714;cursor:pointer;min-height:48px}
+.a11y-panel button.opt[aria-pressed=true]{background:#1d4f91;border-color:#1d4f91;color:#fff}
+.a11y-panel .foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:12px;flex-wrap:wrap}
+.a11y-panel .foot a{color:#1d4f91;font-weight:500}
+.a11y-panel .foot button{font:inherit;font-size:15px;border:0;background:transparent;color:#1d4f91;text-decoration:underline;cursor:pointer;padding:8px 4px}
+.a11y-panel .x{position:absolute;top:8px;inset-inline-end:8px;width:40px;height:40px;border-radius:50%;border:0;background:#f1ebe3;font-size:22px;cursor:pointer;color:#1b1714}
+/* Режимы */
+html.a11y-text-1 main,html.a11y-text-1 footer{zoom:1.15}
+html.a11y-text-2 main,html.a11y-text-2 footer{zoom:1.3}
+html.a11y-links a{text-decoration:underline!important;text-underline-offset:3px}
+html.a11y-links a:not(.skip){outline:2px dashed currentColor;outline-offset:2px}
+html.a11y-font body,html.a11y-font h1,html.a11y-font h2,html.a11y-font h3,html.a11y-font .logo,html.a11y-font blockquote,html.a11y-font .price b,html.a11y-font .common,html.a11y-font .menu a.item{font-family:Arial,Helvetica,'Rubik',sans-serif!important;letter-spacing:.01em}
+html.a11y-still *,html.a11y-still *::before,html.a11y-still *::after{animation:none!important;transition:none!important}
+html.a11y-still .js .rv,html.a11y-still.js .rv{opacity:1;transform:none}
+html.a11y-still .bokeh{display:none}
+html.a11y-contrast *{text-shadow:none!important}
+html.a11y-contrast body{background:#fff;color:#000}
+html.a11y-contrast main>section:not(.hero),html.a11y-contrast footer{background:#fff!important;color:#000!important}
+html.a11y-contrast #contact h2,html.a11y-contrast #contact .lead{color:#000!important}
+html.a11y-contrast .card,html.a11y-contrast .price,html.a11y-contrast details,html.a11y-contrast .note,html.a11y-contrast #contact .note{background:#fff!important;color:#000!important;box-shadow:none!important;border:2px solid #000}
+html.a11y-contrast .muted,html.a11y-contrast .lead,html.a11y-contrast details p,html.a11y-contrast .price .muted{color:#000!important}
+html.a11y-contrast .hero.with-photo::after,html.a11y-contrast .hero::after{background:rgba(0,0,0,.72)!important}
+html.a11y-contrast .btn,html.a11y-contrast #contact .btn,html.a11y-contrast .links a.primary{background:#000!important;color:#fff!important;box-shadow:none!important}
+html.a11y-contrast .btn.ghost,html.a11y-contrast #contact .btn.ghost{background:#fff!important;color:#000!important;box-shadow:inset 0 0 0 2px #000!important}
+html.a11y-contrast .links a{background:#fff!important;color:#000!important}
+html.a11y-contrast a{color:#00379e}
+html.a11y-contrast .price b,html.a11y-contrast blockquote,html.a11y-contrast h2{color:#000!important}
+html.a11y-contrast header.solid{background:#fff}
+@media(prefers-reduced-motion:reduce){.bokeh{display:none}}
+</style>
+<script src="config.js"></script>
+</head>
+<body>
+<a class="skip" href="#top" data-t="skip"></a>
+<header id="hdr"><div class="wrap">
+  <a class="logo" href="#top" data-t="logo"></a>
+  <nav>
+    <div class="langs" role="group" aria-label="Language / שפה / Язык"><button type="button" data-lang="he" lang="he">עברית</button><button type="button" data-lang="ru" lang="ru">Русский</button></div>
+    <button class="burger" id="burger" aria-controls="menu" aria-expanded="false" data-aria="menu_open"><span></span><span></span><span></span></button>
+  </nav>
+</div></header>
+
+<div class="menu" id="menu" role="dialog" aria-modal="true" data-aria="menu_open">
+  <div class="top"><span class="logo" data-t="logo"></span><button class="close" id="menu-close" data-aria="menu_close">×</button></div>
+  <nav>
+    <a class="item" href="#about" data-t="nav_about"></a>
+    <a class="item" href="#who" data-t="nav_who"></a>
+    <a class="item" href="#method" data-t="nav_method"></a>
+    <a class="item" href="#how" data-t="nav_how"></a>
+    <a class="item" href="#prices" data-t="nav_prices"></a>
+    <a class="item" href="#faq" data-t="nav_faq"></a>
+    <a class="item" href="#contact" data-t="nav_contact"></a>
+  </nav>
+  <div class="bottom"><a class="wa-btn" data-book data-t="cta_intro"></a><a class="ig-btn" id="menu-ig" hidden>Instagram</a></div>
+</div>
+
+<main id="top" tabindex="-1">
+<section class="hero">
+  <div class="sr-only" id="hero-photo" role="img" data-aria="photo_alt" hidden></div>
+  <div class="wrap">
+  <div class="profile"><div class="avatar" id="avatar"></div><div><b data-t="logo"></b><span data-t="profile_sub"></span></div></div>
+  <h1 data-t="hero_title"></h1>
+  <p class="lead" data-t="hero_lead"></p>
+  <div class="links">
+    <a class="primary" data-book><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M20 11.5a8 8 0 0 1-11.6 7.1L4 20l1.4-4.2A8 8 0 1 1 20 11.5Z"/></svg></span><span><span data-t="cta_intro"></span><small data-t="link_intro_sub"></small></span></a>
+    <a data-wa="diag"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span><span><span data-t="link_diag"></span><small data-t="link_diag_sub"></small></span></a>
+    <a href="#prices"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 20c-4.5-3-8-6.2-8-10a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 3.8-3.5 7-8 10Z"/></svg></span><span data-t="link_prices"></span></a>
+    <a href="#how"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M6 19c0-6 3-10 12-13-1 8-4 12-10 12"/><path d="M6 19c2-3 4-5 7-7"/></svg></span><span data-t="link_how"></span></a>
+  </div>
+</div></section>
+
+<section id="who"><div class="wrap">
+  <h2 class="rv" data-t="who_title"></h2>
+  <div class="grid">
+    <div class="card rv"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 20c-4.5-3-8-6.2-8-10a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 3.8-3.5 7-8 10Z"/><path d="M7 11h2.5l1.5-2.5 2 5 1.5-2.5H17"/></svg></span><h3 data-t="who1_h"></h3><p class="muted" data-t="who1_p"></p></div>
+    <div class="card rv"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 18c3 0 3-4 6-4s3 4 6 4 2-6 4-8"/><circle cx="18.5" cy="6" r="1.8"/></svg></span><h3 data-t="who2_h"></h3><p class="muted" data-t="who2_p"></p></div>
+    <div class="card rv"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 20v-9"/><path d="M12 13c-3.5 0-6-2.3-6-6 3.5 0 6 2.3 6 6Z"/><path d="M12 11c0-3.3 2.2-5.5 5.5-5.5 0 3.3-2.2 5.5-5.5 5.5Z"/><path d="M7 20h10"/></svg></span><h3 data-t="who3_h"></h3><p class="muted" data-t="who3_p"></p></div>
+  </div>
+</div></section>
+
+<section id="method"><div class="wrap">
+  <h2 class="rv" data-t="method_title"></h2>
+  <div class="grid">
+    <div class="card rv"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-14 14Z"/><path d="M5 19c3-4 6-7 10-10"/></svg></span><h3 data-t="m1_h"></h3><p class="muted" data-t="m1_p"></p></div>
+    <div class="card rv"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 7c-2-1.5-4.5-2-8-2v12c3.5 0 6 .5 8 2 2-1.5 4.5-2 8-2V5c-3.5 0-6 .5-8 2Z"/><path d="M12 7v12"/></svg></span><h3 data-t="m2_h"></h3><p class="muted" data-t="m2_p"></p></div>
+  </div>
+  <p class="common rv" data-t="method_common"></p>
+</div></section>
+
+<section id="how"><div class="wrap">
+  <h2 class="rv" data-t="how_title"></h2>
+  <ol class="steps"><li class="rv" data-t="how1"></li><li class="rv" data-t="how2"></li><li class="rv" data-t="how3"></li><li class="rv" data-t="how4"></li></ol>
+  <p class="note rv" data-t="how_prep"></p>
+</div></section>
+
+<section id="prices"><div class="wrap">
+  <h2 class="rv" data-t="prices_title"></h2>
+  <div id="price-list"></div>
+  <p class="note rv" data-t="pay_note"></p>
+  <div class="btns"><a class="btn" data-book data-t="cta_intro"></a><a class="btn ghost" data-book-diag data-t="cta_diag"></a></div>
+</div></section>
+
+<section id="about"><div class="wrap about">
+  <div class="photo rv" id="photo">И</div>
+  <div class="rv">
+    <h2 data-t="about_title"></h2>
+    <p data-t="about_p"></p>
+    <blockquote data-t="credo"></blockquote>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <h2 class="rv" data-t="faq_title"></h2>
+  <div id="faq-list"></div>
+</div></section>
+
+<section id="contact">
+  <div class="bokeh" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="wrap">
+  <h2 class="rv" data-t="final_title"></h2>
+  <p class="lead rv" data-t="final_p"></p>
+  <div class="btns"><a class="btn" data-book data-t="cta_intro"></a><a class="btn ghost" data-wa="hello" data-t="cta_wa"></a></div>
+  <p class="note" data-t="disclaimer"></p>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span data-t="footer"></span> <span id="ig"></span> · <a id="a11y-link" href="accessibility.html" data-t="a11y_statement"></a></div>
+<span id="newwin" class="sr-only" data-t="new_window"></span>
+<a class="wa off" id="wa-float" data-wa="hello"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2a9.7 9.7 0 0 0-8.3 14.8L2.4 21.8l4.9-1.3A9.7 9.7 0 1 0 12 2.2Zm0 17.7a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 19.9Zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.6.3 2.7 2.7 0 0 0-.9 2c0 1.2.9 2.4 1 2.5.1.2 1.7 2.7 4.2 3.8 1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.6-.3Z"/></svg>WhatsApp</a>
+</footer>
+<button class="a11y-btn" id="a11y-btn" type="button" aria-expanded="false" aria-controls="a11y-panel" data-aria="a11y_open"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="4" r="2"/><path d="M20.5 7.2 14.6 8.4h-5.2L3.5 7.2a1 1 0 0 0-.4 2l5.4 1.3v3.6l-2 6.4a1 1 0 0 0 1.9.6l2-5.9h3.2l2 5.9a1 1 0 0 0 1.9-.6l-2-6.4v-3.6l5.4-1.3a1 1 0 0 0-.4-2Z"/></svg></button>
+<div class="a11y-panel" id="a11y-panel" role="dialog" aria-labelledby="a11y-title" hidden>
+  <button class="x" type="button" id="a11y-close" data-aria="menu_close">×</button>
+  <h2 id="a11y-title" data-t="a11y_title"></h2>
+  <div class="row">
+    <button class="opt" type="button" data-a11y="text" data-t="a11y_text"></button>
+    <button class="opt" type="button" data-a11y="contrast" data-t="a11y_contrast"></button>
+    <button class="opt" type="button" data-a11y="links" data-t="a11y_links"></button>
+    <button class="opt" type="button" data-a11y="font" data-t="a11y_font"></button>
+    <button class="opt" type="button" data-a11y="still" data-t="a11y_still"></button>
+  </div>
+  <div class="foot"><a href="accessibility.html" id="a11y-link2" data-t="a11y_statement"></a><button type="button" id="a11y-reset" data-t="a11y_reset"></button></div>
+</div>
+
+<script>
+const T = {
+ru: {
+  logo: 'Ира Коэн', nav_method: 'Метод', nav_how: 'Как проходит встреча', nav_prices: 'Цены и оплата', nav_faq: 'Вопросы',
+  nav_about: 'Обо мне', nav_who: 'Для кого', nav_contact: 'Контакты', menu_open: 'Меню', menu_close: 'Закрыть',
+  hero_title: 'Тело говорит. Душа ведёт. Всё — от корня.',
+  hero_lead: 'Соединяю науку о теле и законы души. Помогаю увидеть первопричину болезни, страха или тупика — и вернуться к своей сути.',
+  hero_where: 'Нетания и онлайн · русский и иврит',
+  profile_sub: 'Интегративное здоровье · Эйн а-Бдолах · Нетания и онлайн',
+  link_intro_sub: 'в WhatsApp · Нетания или онлайн',
+  link_diag: 'Диагностическая сессия · 600 ₪', link_diag_sub: '90 минут · Нетания или онлайн',
+  link_prices: 'Услуги и цены', link_how: 'Как проходит первая встреча',
+  src_tag: ' (сайт · {src})',
+  cta_intro: 'Записаться на встречу', cta_diag: 'Записаться на диагностику', cta_wa: 'Написать в WhatsApp',
+  who_title: 'Для кого это',
+  who1_h: 'Тело «подводит»', who1_p: 'Хроническое состояние, усталость, бессонница, «анализы в норме, а сил нет». Вы лечитесь у врача — и ищете, откуда это пришло.',
+  who2_h: 'Тупик и страх', who2_p: 'Одно и то же повторяется в жизни. Тревога, потеря смысла, ощущение, что живёте не свою жизнь.',
+  who3_h: 'Поиск корня', who3_p: 'Вы открыты к разговору о душе и о том, что больше нас. Как это называть — Бог или энергия — решаете вы.',
+  method_title: 'Два метода — один корень',
+  m1_h: 'Метод д-ра Надера Бутто', m1_p: 'Объединяющая интегративная медицина. Тело, психика и душа — три частоты одной энергии. Симптом — сообщение. За кризисом стоит непрожитое событие, которое забирает жизненную силу. Четыре фазы жизни и «человеческий код», который читается по лицу.',
+  m2_h: 'Метод «Эйн а-Бдолах»', m2_p: 'Колледж «Ильма», школа рава Юваля ха-Коэна Ашрова. Законы души из Торы и каббалы: наблюдатель, «что меня запускает», «нет ничего лишнего», благодарность и связь с Творцом.',
+  method_common: 'Общее у двух методов — то, что вы и так знаете: всё от корня. Мы не ковыряем раны. Мы ищем корень и возвращаем силы.',
+  how_title: 'Как проходит первая встреча',
+  how1: '90 минут разговора — никаких «чисток» и процедур. Я спрашиваю о семье, работе, здоровье и о том, с каких пор «не так».',
+  how2: 'Слушаю, какие фразы повторяются в вашей жизни. Определяю ваш Человеческий код по лицу.',
+  how3: 'Смотрим, сколько у вас сейчас энергии — от 1 до 10.',
+  how4: 'В конце у вас карта: где корень, что с этим делать и сколько встреч нужно. Дальше — 4 или 6 встреч, если захотите идти.',
+  how_prep: 'Готовиться не нужно. Вспомните только важные события и болезни — и когда они были.',
+  prices_title: 'Услуги и цены',
+  pay_note: 'Оплата — Bit или перевод. Встреча в Нетании: предоплата 300 ₪ при записи, остаток на встрече. Онлайн — оплата до встречи. Перенос или отмена — не позже чем за 24 часа.',
+  faq_title: 'Частые вопросы', price_badge: 'С чего начать',
+  skip: 'Перейти к содержанию', new_window: '(откроется в новом окне)', photo_alt: 'Ира Коэн в кабинете, в светлой одежде, улыбается',
+  a11y_open: 'Меню доступности', a11y_title: 'Доступность', a11y_text: 'Крупнее текст', a11y_contrast: 'Высокий контраст', a11y_links: 'Выделить ссылки',
+  a11y_font: 'Простой шрифт', a11y_still: 'Остановить анимацию', a11y_reset: 'Сбросить', a11y_statement: 'Заявление о доступности',
+  about_title: 'Об Ире',
+  about_p: 'Сертифицированный терапевт по методу д-ра Надера Бутто (программа Unified Integrative Medicine Therapist, 2024–2026). Выпускница двухгодичной программы колледжа «Ильма» «Медицина души в пути иудаизма» (2021–2023, 220 академических часов), метод «Эйн а-Бдолах». Практикую с 2021 года. Нетания и онлайн.',
+  credo: '«Мы не пришли в этот мир, чтобы страдать или кому-то что-то доказывать».',
+  final_title: 'Вы ищете корень, а не таблетку',
+  final_p: 'Напишите в WhatsApp — подберём время для первой встречи, в Нетании или онлайн.',
+  disclaimer: 'Это взгляд метода, не медицинский диагноз. Работа дополняет медицину и не заменяет врача, диагноз и лечение. При симптомах — обратитесь к врачу.',
+  footer: '© Ира Коэн · Нетания · онлайн',
+  wa_hello: 'Здравствуйте, Ира!{src} Хочу записаться на встречу.',
+  wa_diag: 'Здравствуйте, Ира!{src} Хочу записаться на диагностическую сессию 90 минут. Удобнее: Нетания / онлайн.',
+  services: [
+    ['Диагностическая сессия «Карта тела и души»', '90 мин · Нетания / онлайн', '600 ₪'],
+    ['Пакет глубинного сопровождения', '4 сессии', '2 000 ₪'],
+    ['Программа глубокой трансформации', '6 сессий', '3 000 ₪'],
+  ],
+  faq: [
+    ['Чем это отличается от психолога?', 'Психолог работает с мыслями и поведением — и это важно. Я смотрю на человека целиком: тело, эмоции, душа. Психолог спросит: «Как вы справляетесь?» Я спрошу: «Откуда это пришло и где оно живёт в теле?» Работа не заменяет психотерапию при диагнозах — она дополняет.'],
+    ['Это больно? Страшно?', 'Нет. Это интересно. Больно — не знать, почему одно и то же повторяется. С первой встречи люди обычно уходят не разбитыми, а удивлёнными: «так вот оно что».'],
+    ['Я не верю в Бога. Мне подходит?', 'Веришь в энергию? Тогда называй как хочешь. Ко мне приходят и религиозные, и совсем светские — разговор один и тот же: тело, чувства, корень.'],
+    ['Это заменяет врача?', 'Нет. Это взгляд метода, а не медицинский диагноз. Продолжайте лечение у врача; наша работа — о первопричине кризиса и о жизненной силе.'],
+    ['Сколько встреч нужно?', 'Это видно после диагностической сессии. Обычно — пакет из 4 или 6 встреч: не чтобы «ходить», а чтобы научиться и дальше идти самостоятельно.'],
+    ['Онлайн работает так же?', 'Да. Встреча — это разговор, поэтому онлайн и очно в Нетании проходят одинаково. На русском или на иврите.'],
+    ['Что от меня требуется?', 'Я даю инструмент, а пользоваться им — ваша часть. Кто приходит «чтобы понять и сделать», получает больше всего.'],
+  ],
+},
+he: {
+  logo: 'אירה כהן', nav_method: 'השיטה', nav_how: 'איך נראה מפגש', nav_prices: 'מחירים ותשלום', nav_faq: 'שאלות',
+  nav_about: 'עליי', nav_who: 'למי זה מתאים', nav_contact: 'צור קשר', menu_open: 'תפריט', menu_close: 'סגירה',
+  hero_title: 'הגוף מדבר. הנשמה מובילה. הכל מהשורש.',
+  hero_lead: 'מחברת בין מדע הגוף לחוקי הנשמה. עוזרת לראות את שורש המחלה, הפחד או התקיעות — ולחזור לעצמך.',
+  hero_where: 'נתניה ואונליין · עברית ורוסית',
+  profile_sub: 'רפואה אינטגרטיבית · עין הבדולח · נתניה ואונליין',
+  link_intro_sub: 'בוואטסאפ · נתניה או אונליין',
+  link_diag: 'מפגש אבחון · 600 ₪', link_diag_sub: '90 דקות · נתניה או אונליין',
+  link_prices: 'שירותים ומחירים', link_how: 'איך נראה המפגש הראשון',
+  src_tag: ' (מהאתר · {src})',
+  cta_intro: 'לקביעת פגישה', cta_diag: 'לקבוע מפגש אבחון', cta_wa: 'לכתוב בוואטסאפ',
+  who_title: 'למי זה מתאים',
+  who1_h: 'הגוף "מאכזב"', who1_p: 'מצב כרוני, עייפות, נדודי שינה, "הבדיקות תקינות ואין כוח". אתם בטיפול רפואי — ומחפשים מאיפה זה הגיע.',
+  who2_h: 'תקיעות ופחד', who2_p: 'אותו דבר חוזר בחיים. חרדה, אובדן משמעות, תחושה שאתם חיים חיים לא שלכם.',
+  who3_h: 'חיפוש השורש', who3_p: 'אתם פתוחים לשיחה על הנשמה ועל מה שגדול מאיתנו. איך לקרוא לזה — אלוהים או אנרגיה — זו הבחירה שלכם.',
+  method_title: 'שתי שיטות — שורש אחד',
+  m1_h: 'שיטת ד"ר נאדר בוטו', m1_p: 'רפואה אינטגרטיבית מאחדת. גוף, נפש ונשמה — שלושה תדרים של אנרגיה אחת. הסימפטום הוא מסר. מאחורי משבר עומד אירוע שלא עובד, שגוזל חיוניות. ארבעת שלבי החיים ו"הקוד האנושי", שנקרא מתוך הפנים.',
+  m2_h: 'שיטת עין הבדולח', m2_p: 'מכללת אילמה, בית המדרש של הרב יובל הכהן אשרוב. חוקי הנשמה מהתורה והקבלה: המתבונן, "מה מפעיל אותי", "אין שום דבר מיותר", הכרת תודה והחיבור לבורא.',
+  method_common: 'המשותף לשתי השיטות — מה שאתם כבר יודעים: הכל מהשורש. אנחנו לא פותחים פצעים. אנחנו מחפשים את השורש ומחזירים כוחות.',
+  how_title: 'איך נראה המפגש הראשון',
+  how1: '90 דקות של שיחה — בלי "ניקויים" ובלי טיפולים. אני שואלת על משפחה, עבודה, בריאות, ומתי זה התחיל להרגיש "לא נכון".',
+  how2: 'מקשיבה לאילו משפטים חוזרים בחיים שלכם. מגדירה את הקוד האנושי שלכם לפי הפנים.',
+  how3: 'בודקים כמה אנרגיה יש לכם עכשיו — מ-1 עד 10.',
+  how4: 'בסוף יש לכם מפה: איפה השורש, מה עושים עם זה וכמה מפגשים צריך. אחר כך — 4 או 6 מפגשים, אם תרצו להמשיך.',
+  how_prep: 'לא צריך להתכונן. רק להיזכר באירועים ובמחלות החשובים — ומתי הם היו.',
+  prices_title: 'שירותים ומחירים',
+  pay_note: 'תשלום בביט או בהעברה. מפגש בנתניה: מקדמה של 300 ₪ בקביעת התור, היתרה במפגש. אונליין — תשלום לפני המפגש. ביטול או שינוי — עד 24 שעות לפני.',
+  faq_title: 'שאלות נפוצות', price_badge: 'מכאן מתחילים',
+  skip: 'דילוג לתוכן', new_window: '(נפתח בחלון חדש)', photo_alt: 'אירה כהן בקליניקה, בבגדים בהירים, מחייכת',
+  a11y_open: 'תפריט נגישות', a11y_title: 'נגישות', a11y_text: 'הגדלת טקסט', a11y_contrast: 'ניגודיות גבוהה', a11y_links: 'הדגשת קישורים',
+  a11y_font: 'גופן קריא', a11y_still: 'עצירת אנימציות', a11y_reset: 'איפוס', a11y_statement: 'הצהרת נגישות',
+  about_title: 'על אירה',
+  about_p: 'מטפלת מוסמכת בשיטת ד"ר נאדר בוטו (Unified Integrative Medicine Therapist, 2024–2026). בוגרת התוכנית הדו-שנתית של מכללת אילמה "רפואת הנפש דרך יהדות וקבלה" (2021–2023, 220 שעות אקדמיות), שיטת עין הבדולח. מטפלת מאז 2021. נתניה ואונליין.',
+  credo: '"לא באנו לעולם כדי לסבול או להוכיח משהו למישהו".',
+  final_title: 'אתם מחפשים שורש, לא כדור',
+  final_p: 'כתבו בוואטסאפ — נמצא זמן למפגש הראשון, בנתניה או אונליין.',
+  disclaimer: 'זוהי נקודת המבט של השיטה, לא אבחנה רפואית. העבודה משלימה את הרפואה ואינה מחליפה רופא, אבחון או טיפול. בכל סימפטום — פנו לרופא.',
+  footer: '© אירה כהן · נתניה · אונליין',
+  wa_hello: 'שלום אירה!{src} אשמח לקבוע פגישה.',
+  wa_diag: 'שלום אירה!{src} אשמח לקבוע מפגש אבחון של 90 דקות. נוח לי: נתניה / אונליין.',
+  services: [
+    ['מפגש אבחון "מפת הגוף והנשמה"', '90 דק׳ · נתניה / אונליין', '600 ₪'],
+    ['חבילת ליווי עומק', '4 מפגשים', '2,000 ₪'],
+    ['תוכנית טרנספורמציה עמוקה', '6 מפגשים', '3,000 ₪'],
+  ],
+  faq: [
+    ['במה זה שונה מפסיכולוג?', 'פסיכולוג עובד עם מחשבות והתנהגות — וזה חשוב. אני מסתכלת על האדם כולו: גוף, רגש, נשמה. פסיכולוג ישאל "איך אתה מתמודד?" — אני אשאל "מאיפה זה הגיע ואיפה זה גר בגוף?". העבודה לא מחליפה פסיכותרפיה כשיש אבחנה — היא משלימה.'],
+    ['זה כואב? מפחיד?', 'לא. זה מעניין. כואב זה לא לדעת למה אותו דבר חוזר. בדרך כלל יוצאים מהמפגש הראשון לא שבורים, אלא מופתעים: "אז זה מה שקורה".'],
+    ['אני לא מאמין/ה באלוהים. זה מתאים לי?', 'מאמינים באנרגיה? אז תקראו לזה איך שתרצו. מגיעים אליי גם דתיים וגם חילונים לגמרי — השיחה אותה שיחה: גוף, רגשות, שורש.'],
+    ['זה מחליף רופא?', 'לא. זו נקודת המבט של השיטה, לא אבחנה רפואית. המשיכו בטיפול אצל הרופא; העבודה שלנו עוסקת בשורש המשבר ובחיוניות.'],
+    ['כמה מפגשים צריך?', 'זה מתברר אחרי מפגש האבחון. בדרך כלל — חבילה של 4 או 6 מפגשים: לא כדי "ללכת", אלא כדי ללמוד ולהמשיך לבד.'],
+    ['אונליין עובד באותה מידה?', 'כן. המפגש הוא שיחה, ולכן אונליין ופרונטלי בנתניה עובדים אותו דבר. בעברית או ברוסית.'],
+    ['מה נדרש ממני?', 'אני נותנת כלי, ולהשתמש בו — זה החלק שלכם. מי שבא "כדי להבין ולעשות" מקבל הכי הרבה.'],
+  ],
+},
+}
+const S = window.SITE || {}
+// ?src=ig|tiktok|fb в ссылке → подпись источника в сообщении WhatsApp (Ира видит, откуда пришёл человек)
+const SRC = { ig: 'Instagram', instagram: 'Instagram', tt: 'TikTok', tiktok: 'TikTok', fb: 'Facebook', facebook: 'Facebook', wa: 'WhatsApp', google: 'Google' }
+const srcKey = (new URLSearchParams(location.search).get('src') || '').toLowerCase()
+const src = SRC[srcKey] || (srcKey ? srcKey.slice(0, 20) : '')
+const wa = text => 'https://wa.me/' + (S.whatsapp || '') + '?text=' + encodeURIComponent(text.replace('{src}', src ? T[lang].src_tag.replace('{src}', src) : ''))
+const qLang = new URLSearchParams(location.search).get('lang')
+let lang = 'he'
+try { lang = (qLang === 'ru' || qLang === 'he') ? qLang : (localStorage.getItem('lang') || ((navigator.language || '').startsWith('ru') ? 'ru' : 'he')) } catch {}
+const esc = s => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]))
+function render() {
+  const t = T[lang]
+  document.documentElement.lang = lang
+  document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr'
+  document.querySelectorAll('[data-t]').forEach(el => { el.textContent = t[el.dataset.t] ?? '' })
+  document.querySelectorAll('[data-lang]').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === lang))
+  document.querySelectorAll('[data-aria]').forEach(el => el.setAttribute('aria-label', t[el.dataset.aria] ?? ''))
+  const mig = document.getElementById('menu-ig'); if (S.instagram) { mig.hidden = false; mig.href = 'https://instagram.com/' + S.instagram; mig.target = '_blank'; mig.rel = 'noopener' }
+  if (!S.photo) document.getElementById('photo').textContent = document.getElementById('avatar').textContent = t.logo[0]
+  document.querySelectorAll('[data-wa]').forEach(a => { a.href = wa(t['wa_' + a.dataset.wa]); a.target = '_blank'; a.rel = 'noopener' })
+  document.querySelectorAll('[data-book]').forEach(a => { a.href = S.booking_url || wa(t.wa_hello); a.target = '_blank'; a.rel = 'noopener' })
+  document.querySelectorAll('[data-book-diag]').forEach(a => { a.href = S.booking_diag_url || S.booking_url || wa(t.wa_hello); a.target = '_blank'; a.rel = 'noopener' })
+  document.getElementById('price-list').innerHTML = t.services.map(([n, f, p], i) => `<div class="price rv in${i ? '' : ' first'}">${i ? '' : `<span class="badge">${esc(t.price_badge)}</span>`}<div>${esc(n)}<div class="muted">${esc(f)}</div></div><b>${esc(p)}</b></div>`).join('')
+  document.getElementById('faq-list').innerHTML = t.faq.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')
+  document.getElementById('ig').innerHTML = S.instagram ? `· <a href="https://instagram.com/${esc(S.instagram)}" target="_blank" rel="noopener">@${esc(S.instagram)}</a>` : ''
+  // ссылки в новом окне: экранный диктор сообщит об этом
+  document.querySelectorAll('a[target=_blank]').forEach(a => a.setAttribute('aria-describedby', 'newwin'))
+  for (const id of ['a11y-link', 'a11y-link2']) document.getElementById(id).href = 'accessibility.html?lang=' + lang
+  if (window.a11yReady) syncA11y()
+}
+document.querySelectorAll('[data-lang]').forEach(b => b.onclick = () => { lang = b.dataset.lang; try { localStorage.setItem('lang', lang) } catch {}; render() })
+if (S.photo) {
+  for (const id of ['photo', 'avatar']) { const p = document.getElementById(id); p.style.backgroundImage = `url(${S.photo})`; p.textContent = '' }
+  const h = document.querySelector('.hero'); h.classList.add('with-photo'); h.style.setProperty('--hero-photo', `url(${S.photo})`)
+  document.body.classList.add('with-photo-page')
+  document.getElementById('hero-photo').hidden = false
+}
+render()
+// Меню-«бургер»
+const menu = document.getElementById('menu'), burger = document.getElementById('burger')
+const setMenu = open => { const was = menu.classList.contains('open'); menu.classList.toggle('open', open); burger.setAttribute('aria-expanded', open); document.body.classList.toggle('noscroll', open); if (open) document.getElementById('menu-close').focus(); else if (was) burger.focus() }
+const trap = (box, e) => { if (e.key !== 'Tab') return; const f = [...box.querySelectorAll('a[href]:not([hidden]),button:not([hidden])')].filter(x => x.offsetParent !== null); if (!f.length) return; const a = f[0], z = f[f.length - 1]; if (e.shiftKey && document.activeElement === a) { e.preventDefault(); z.focus() } else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus() } }
+menu.addEventListener('keydown', e => trap(menu, e))
+burger.onclick = () => setMenu(true)
+document.getElementById('menu-close').onclick = () => setMenu(false)
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)))
+addEventListener('keydown', e => { if (e.key === 'Escape') { if (menu.classList.contains('open')) setMenu(false); if (!a11yPanel.hidden) setA11y(false) } })
+// Панель доступности: настройки сохраняются в браузере посетителя
+const a11yBtn = document.getElementById('a11y-btn'), a11yPanel = document.getElementById('a11y-panel')
+let A = { text: 0, contrast: false, links: false, font: false, still: false }
+try { A = Object.assign(A, JSON.parse(localStorage.getItem('a11y') || '{}')) } catch {}
+function syncA11y() {
+  const h = document.documentElement
+  h.classList.toggle('a11y-text-1', A.text === 1); h.classList.toggle('a11y-text-2', A.text === 2)
+  for (const k of ['contrast', 'links', 'font', 'still']) h.classList.toggle('a11y-' + k, !!A[k])
+  document.querySelectorAll('[data-a11y]').forEach(b => { const k = b.dataset.a11y; b.setAttribute('aria-pressed', k === 'text' ? A.text > 0 : !!A[k]); if (k === 'text') b.textContent = T[lang].a11y_text + (A.text ? ' ' + '+'.repeat(A.text) : '') })
+  try { localStorage.setItem('a11y', JSON.stringify(A)) } catch {}
+}
+const setA11y = open => { a11yPanel.hidden = !open; a11yBtn.setAttribute('aria-expanded', open); if (open) a11yPanel.querySelector('.opt').focus(); else a11yBtn.focus() }
+a11yBtn.onclick = () => setA11y(a11yPanel.hidden)
+document.getElementById('a11y-close').onclick = () => setA11y(false)
+a11yPanel.addEventListener('keydown', e => trap(a11yPanel, e))
+document.querySelectorAll('[data-a11y]').forEach(b => b.onclick = () => { const k = b.dataset.a11y; if (k === 'text') A.text = (A.text + 1) % 3; else A[k] = !A[k]; syncA11y() })
+document.getElementById('a11y-reset').onclick = () => { A = { text: 0, contrast: false, links: false, font: false, still: false }; syncA11y() }
+syncA11y(); window.a11yReady = true
+// Шапка прозрачная на первом экране, светлая — ниже
+const hdr = document.getElementById('hdr'), hero = document.querySelector('.hero')
+const onScroll = () => hdr.classList.toggle('solid', hero.getBoundingClientRect().bottom < 70)
+addEventListener('scroll', onScroll, { passive: true }); onScroll()
+// Плавающая кнопка не закрывает кнопки первого экрана
+const fl = document.getElementById('wa-float'), links = document.querySelector('.links')
+addEventListener('scroll', () => fl.classList.toggle('off', links.getBoundingClientRect().bottom > 0), { passive: true })
+// Мягкое появление блоков при прокрутке (без JS всё видно сразу)
+if ('IntersectionObserver' in window) {
+  document.documentElement.classList.add('js')
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target) } }), { rootMargin: '0px 0px -8% 0px' })
+  document.querySelectorAll('.rv:not(.in)').forEach(el => io.observe(el))
+}
+</script>
+</body>
+</html>
