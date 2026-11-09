@@ -140,6 +140,8 @@ main>section:not(.hero){position:relative;padding:76px 0 84px;margin-top:-34px;b
 .price{position:relative;display:flex;justify-content:space-between;align-items:center;gap:16px;background:#fff;border-radius:var(--r);padding:20px 22px;box-shadow:var(--shadow)}
 .price .muted{font-size:14px;margin-top:2px}
 .price b{white-space:nowrap;font-size:30px;font-weight:600;color:var(--accent);line-height:1}
+.price b.free{font-family:inherit;font-size:18px;font-weight:500;white-space:normal;max-width:104px;text-align:center;line-height:1.25}
+.pay-free{max-width:680px;margin:-6px auto 22px;text-align:center;font-size:18px;line-height:1.6}
 .price.first{background:linear-gradient(130deg,#fffaf2,#f4e8d4);box-shadow:var(--shadow),inset 0 0 0 1.5px rgba(168,134,95,.4);padding-top:30px}
 .badge{position:absolute;top:-11px;inset-inline-start:20px;background:var(--accent);color:#fff;font-size:12.5px;font-weight:500;padding:3px 12px;border-radius:999px;letter-spacing:.02em}
 .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;justify-content:center}
@@ -333,6 +335,7 @@ html.a11y-contrast header.solid{background:#fff}
 
 <section id="prices"><div class="wrap">
   <h2 class="rv" data-t="prices_title"></h2>
+  <p class="pay-free rv" data-t="pay_free"></p>
   <div id="price-list"></div>
   <p class="note rv" data-t="pay_note"></p>
   <div class="btns"><a class="btn" data-book data-t="cta_intro"></a><a class="btn ghost" data-book-diag data-t="cta_diag"></a></div>
@@ -383,15 +386,15 @@ html.a11y-contrast header.solid{background:#fff}
 <script>
 const T = {
 ru: {
-  logo: 'Ира Коэн', nav_method: 'Метод', nav_how: 'Как проходит встреча', nav_prices: 'Цены и оплата', nav_faq: 'Вопросы',
+  logo: 'Ира Коэн', nav_method: 'Метод', nav_how: 'Как проходит встреча', nav_prices: 'Оплата', nav_faq: 'Вопросы',
   nav_about: 'Обо мне', nav_who: 'Для кого', nav_contact: 'Контакты', menu_open: 'Меню', menu_close: 'Закрыть',
   hero_title: 'Тело говорит. Душа ведёт. Всё — от корня.',
   hero_lead: 'Соединяю науку о теле и законы души. Помогаю увидеть первопричину болезни, страха или тупика — и вернуться к своей сути.',
   hero_where: 'Нетания и онлайн · русский и иврит',
   profile_sub: 'Интегративное здоровье · Эйн а-Бдолах · Нетания и онлайн',
   link_intro_sub: 'в WhatsApp · Нетания или онлайн',
-  link_diag: 'Диагностическая сессия · 600 ₪', link_diag_sub: '90 минут · Нетания или онлайн',
-  link_prices: 'Услуги и цены', link_how: 'Как проходит первая встреча',
+  link_diag: 'Диагностическая сессия «Карта тела и души»', link_diag_sub: '90 минут · оплата по возможности',
+  link_prices: 'Услуги и оплата', link_how: 'Как проходит первая встреча',
   src_tag: ' (сайт · {src})',
   cta_intro: 'Записаться на встречу', cta_diag: 'Записаться на диагностику', cta_wa: 'Написать в WhatsApp',
   who_title: 'Для кого это',
@@ -408,8 +411,9 @@ ru: {
   how3: 'Смотрим, сколько у вас сейчас энергии — от 1 до 10.',
   how4: 'В конце у вас карта: где корень, что с этим делать и сколько встреч нужно. Дальше — 4 или 6 встреч, если захотите идти.',
   how_prep: 'Готовиться не нужно. Вспомните только важные события и болезни — и когда они были.',
-  prices_title: 'Услуги и цены',
-  pay_note: 'Оплата — Bit или перевод. Встреча в Нетании: предоплата 300 ₪ при записи, остаток на встрече. Онлайн — оплата до встречи. Перенос или отмена — не позже чем за 24 часа.',
+  prices_title: 'Услуги и оплата',
+  pay_free: 'Сейчас все мои встречи — с оплатой по возможности: каждый даёт столько, сколько может и сколько чувствует правильным. Мне важно, чтобы прийти мог каждый, кому это нужно.',
+  pay_note: 'Оплата — Bit или перевод. Перенос или отмена — не позже чем за 24 часа.',
   faq_title: 'Частые вопросы', price_badge: 'С чего начать',
   skip: 'Перейти к содержанию', new_window: '(откроется в новом окне)', photo_alt: 'Ира Коэн в кабинете, в светлой одежде, улыбается',
   a11y_open: 'Меню доступности', a11y_title: 'Доступность', a11y_text: 'Крупнее текст', a11y_contrast: 'Высокий контраст', a11y_links: 'Выделить ссылки',
@@ -424,9 +428,9 @@ ru: {
   wa_hello: 'Здравствуйте, Ира!{src} Хочу записаться на встречу.',
   wa_diag: 'Здравствуйте, Ира!{src} Хочу записаться на диагностическую сессию 90 минут. Удобнее: Нетания / онлайн.',
   services: [
-    ['Диагностическая сессия «Карта тела и души»', '90 мин · Нетания / онлайн', '600 ₪'],
-    ['Пакет глубинного сопровождения', '4 сессии', '2 000 ₪'],
-    ['Программа глубокой трансформации', '6 сессий', '3 000 ₪'],
+    ['Диагностическая сессия «Карта тела и души»', '90 мин · Нетания / онлайн', 'по возможности'],
+    ['Пакет глубинного сопровождения', '4 сессии', 'по возможности'],
+    ['Программа глубокой трансформации', '6 сессий', 'по возможности'],
   ],
   faq: [
     ['Чем это отличается от психолога?', 'Психолог работает с мыслями и поведением — и это важно. Я смотрю на человека целиком: тело, эмоции, душа. Психолог спросит: «Как вы справляетесь?» Я спрошу: «Откуда это пришло и где оно живёт в теле?» Работа не заменяет психотерапию при диагнозах — она дополняет.'],
@@ -439,15 +443,15 @@ ru: {
   ],
 },
 he: {
-  logo: 'אירה כהן', nav_method: 'השיטה', nav_how: 'איך נראה מפגש', nav_prices: 'מחירים ותשלום', nav_faq: 'שאלות',
+  logo: 'אירה כהן', nav_method: 'השיטה', nav_how: 'איך נראה מפגש', nav_prices: 'תשלום', nav_faq: 'שאלות',
   nav_about: 'עליי', nav_who: 'למי זה מתאים', nav_contact: 'צור קשר', menu_open: 'תפריט', menu_close: 'סגירה',
   hero_title: 'הגוף מדבר. הנשמה מובילה. הכל מהשורש.',
   hero_lead: 'מחברת בין מדע הגוף לחוקי הנשמה. עוזרת לראות את שורש המחלה, הפחד או התקיעות — ולחזור לעצמך.',
   hero_where: 'נתניה ואונליין · עברית ורוסית',
   profile_sub: 'רפואה אינטגרטיבית · עין הבדולח · נתניה ואונליין',
   link_intro_sub: 'בוואטסאפ · נתניה או אונליין',
-  link_diag: 'מפגש אבחון · 600 ₪', link_diag_sub: '90 דקות · נתניה או אונליין',
-  link_prices: 'שירותים ומחירים', link_how: 'איך נראה המפגש הראשון',
+  link_diag: 'מפגש אבחון "מפת הגוף והנשמה"', link_diag_sub: '90 דקות · תשלום לפי יכולת',
+  link_prices: 'שירותים ותשלום', link_how: 'איך נראה המפגש הראשון',
   src_tag: ' (מהאתר · {src})',
   cta_intro: 'לקביעת פגישה', cta_diag: 'לקבוע מפגש אבחון', cta_wa: 'לכתוב בוואטסאפ',
   who_title: 'למי זה מתאים',
@@ -464,8 +468,9 @@ he: {
   how3: 'בודקים כמה אנרגיה יש לכם עכשיו — מ-1 עד 10.',
   how4: 'בסוף יש לכם מפה: איפה השורש, מה עושים עם זה וכמה מפגשים צריך. אחר כך — 4 או 6 מפגשים, אם תרצו להמשיך.',
   how_prep: 'לא צריך להתכונן. רק להיזכר באירועים ובמחלות החשובים — ומתי הם היו.',
-  prices_title: 'שירותים ומחירים',
-  pay_note: 'תשלום בביט או בהעברה. מפגש בנתניה: מקדמה של 300 ₪ בקביעת התור, היתרה במפגש. אונליין — תשלום לפני המפגש. ביטול או שינוי — עד 24 שעות לפני.',
+  prices_title: 'שירותים ותשלום',
+  pay_free: 'בתקופה הזו כל המפגשים שלי בתשלום לפי יכולת: כל אחד ואחת נותנים כמה שיכולים ומרגישים שנכון. חשוב לי שכל מי שצריך יוכל להגיע.',
+  pay_note: 'תשלום בביט או בהעברה. ביטול או שינוי — עד 24 שעות לפני.',
   faq_title: 'שאלות נפוצות', price_badge: 'מכאן מתחילים',
   skip: 'דילוג לתוכן', new_window: '(נפתח בחלון חדש)', photo_alt: 'אירה כהן בקליניקה, בבגדים בהירים, מחייכת',
   a11y_open: 'תפריט נגישות', a11y_title: 'נגישות', a11y_text: 'הגדלת טקסט', a11y_contrast: 'ניגודיות גבוהה', a11y_links: 'הדגשת קישורים',
@@ -480,9 +485,9 @@ he: {
   wa_hello: 'שלום אירה!{src} אשמח לקבוע פגישה.',
   wa_diag: 'שלום אירה!{src} אשמח לקבוע מפגש אבחון של 90 דקות. נוח לי: נתניה / אונליין.',
   services: [
-    ['מפגש אבחון "מפת הגוף והנשמה"', '90 דק׳ · נתניה / אונליין', '600 ₪'],
-    ['חבילת ליווי עומק', '4 מפגשים', '2,000 ₪'],
-    ['תוכנית טרנספורמציה עמוקה', '6 מפגשים', '3,000 ₪'],
+    ['מפגש אבחון "מפת הגוף והנשמה"', '90 דק׳ · נתניה / אונליין', 'לפי יכולת'],
+    ['חבילת ליווי עומק', '4 מפגשים', 'לפי יכולת'],
+    ['תוכנית טרנספורמציה עמוקה', '6 מפגשים', 'לפי יכולת'],
   ],
   faq: [
     ['במה זה שונה מפסיכולוג?', 'פסיכולוג עובד עם מחשבות והתנהגות — וזה חשוב. אני מסתכלת על האדם כולו: גוף, רגש, נשמה. פסיכולוג ישאל "איך אתה מתמודד?" — אני אשאל "מאיפה זה הגיע ואיפה זה גר בגוף?". העבודה לא מחליפה פסיכותרפיה כשיש אבחנה — היא משלימה.'],
@@ -517,7 +522,7 @@ function render() {
   document.querySelectorAll('[data-wa]').forEach(a => { a.href = wa(t['wa_' + a.dataset.wa]); a.target = '_blank'; a.rel = 'noopener' })
   document.querySelectorAll('[data-book]').forEach(a => { a.href = S.booking_url || wa(t.wa_hello); a.target = '_blank'; a.rel = 'noopener' })
   document.querySelectorAll('[data-book-diag]').forEach(a => { a.href = S.booking_diag_url || S.booking_url || wa(t.wa_hello); a.target = '_blank'; a.rel = 'noopener' })
-  document.getElementById('price-list').innerHTML = t.services.map(([n, f, p], i) => `<div class="price rv in${i ? '' : ' first'}">${i ? '' : `<span class="badge">${esc(t.price_badge)}</span>`}<div>${esc(n)}<div class="muted">${esc(f)}</div></div><b>${esc(p)}</b></div>`).join('')
+  document.getElementById('price-list').innerHTML = t.services.map(([n, f, p], i) => `<div class="price rv in${i ? '' : ' first'}">${i ? '' : `<span class="badge">${esc(t.price_badge)}</span>`}<div>${esc(n)}<div class="muted">${esc(f)}</div></div><b${/\d/.test(p) ? '' : ' class="free"'}>${esc(p)}</b></div>`).join('')
   document.getElementById('faq-list').innerHTML = t.faq.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')
   document.getElementById('ig').innerHTML = S.instagram ? `· <a href="https://instagram.com/${esc(S.instagram)}" target="_blank" rel="noopener">@${esc(S.instagram)}</a>` : ''
   // ссылки в новом окне: экранный диктор сообщит об этом
