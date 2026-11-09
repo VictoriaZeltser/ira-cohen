@@ -429,8 +429,8 @@ ru: {
   wa_diag: 'Здравствуйте, Ира!{src} Хочу записаться на диагностическую сессию 90 минут. Удобнее: Нетания / онлайн.',
   services: [
     ['Диагностическая сессия «Карта тела и души»', '90 мин · Нетания / онлайн', 'по возможности'],
-    ['Пакет глубинного сопровождения', '4 сессии', 'по возможности'],
-    ['Программа глубокой трансформации', '6 сессий', 'по возможности'],
+    ['Пакет глубинного сопровождения', '', 'по возможности'],
+    ['Программа глубокой трансформации', '', 'по возможности'],
   ],
   faq: [
     ['Чем это отличается от психолога?', 'Психолог работает с мыслями и поведением — и это важно. Я смотрю на человека целиком: тело, эмоции, душа. Психолог спросит: «Как вы справляетесь?» Я спрошу: «Откуда это пришло и где оно живёт в теле?» Работа не заменяет психотерапию при диагнозах — она дополняет.'],
@@ -486,8 +486,8 @@ he: {
   wa_diag: 'שלום אירה!{src} אשמח לקבוע מפגש אבחון של 90 דקות. נוח לי: נתניה / אונליין.',
   services: [
     ['מפגש אבחון "מפת הגוף והנשמה"', '90 דק׳ · נתניה / אונליין', 'לפי יכולת'],
-    ['חבילת ליווי עומק', '4 מפגשים', 'לפי יכולת'],
-    ['תוכנית טרנספורמציה עמוקה', '6 מפגשים', 'לפי יכולת'],
+    ['חבילת ליווי עומק', '', 'לפי יכולת'],
+    ['תוכנית טרנספורמציה עמוקה', '', 'לפי יכולת'],
   ],
   faq: [
     ['במה זה שונה מפסיכולוג?', 'פסיכולוג עובד עם מחשבות והתנהגות — וזה חשוב. אני מסתכלת על האדם כולו: גוף, רגש, נשמה. פסיכולוג ישאל "איך אתה מתמודד?" — אני אשאל "מאיפה זה הגיע ואיפה זה גר בגוף?". העבודה לא מחליפה פסיכותרפיה כשיש אבחנה — היא משלימה.'],
@@ -522,7 +522,7 @@ function render() {
   document.querySelectorAll('[data-wa]').forEach(a => { a.href = wa(t['wa_' + a.dataset.wa]); a.target = '_blank'; a.rel = 'noopener' })
   document.querySelectorAll('[data-book]').forEach(a => { a.href = S.booking_url || wa(t.wa_hello); a.target = '_blank'; a.rel = 'noopener' })
   document.querySelectorAll('[data-book-diag]').forEach(a => { a.href = S.booking_diag_url || S.booking_url || wa(t.wa_hello); a.target = '_blank'; a.rel = 'noopener' })
-  document.getElementById('price-list').innerHTML = t.services.map(([n, f, p], i) => `<div class="price rv in${i ? '' : ' first'}">${i ? '' : `<span class="badge">${esc(t.price_badge)}</span>`}<div>${esc(n)}<div class="muted">${esc(f)}</div></div><b${/\d/.test(p) ? '' : ' class="free"'}>${esc(p)}</b></div>`).join('')
+  document.getElementById('price-list').innerHTML = t.services.map(([n, f, p], i) => `<div class="price rv in${i ? '' : ' first'}">${i ? '' : `<span class="badge">${esc(t.price_badge)}</span>`}<div>${esc(n)}${f ? `<div class="muted">${esc(f)}</div>` : ''}</div><b${/\d/.test(p) ? '' : ' class="free"'}>${esc(p)}</b></div>`).join('')
   document.getElementById('faq-list').innerHTML = t.faq.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')
   document.getElementById('ig').innerHTML = S.instagram ? `· <a href="https://instagram.com/${esc(S.instagram)}" target="_blank" rel="noopener">@${esc(S.instagram)}</a>` : ''
   // ссылки в новом окне: экранный диктор сообщит об этом
